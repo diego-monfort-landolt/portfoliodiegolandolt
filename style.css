@@ -72,8 +72,8 @@ body {
     background-color: lightcoral;
     z-index: 1;
 
-    filter: blur(9em);
-    animation: circulo1 100s linear infinite both;
+    filter: blur(5em);
+    
 
 }
 
@@ -81,37 +81,47 @@ body {
     position: absolute;
     width: 50%;
     height: 50%;
-   animation: circulo1 10s linear infinite both; 
+   animation: circulo1 20s linear infinite both; 
 }
 
 .circulos .circulo1 {
-    fill: lime;
+    
     top: 0%;
-    left: 0%;
+    left: 0%; 
     
-    
+}
+.circulos .circulo1 .path {
+    fill: lime;
 }
 
 .circulos .circulo2 {
-    fill: purple;
+    
     top: 0%;
     right: 0%;
     
-   
+}
+.circulos .circulo2 .path {
+    fill: purple;
 }
 
 
 .circulos .circulo3 {
-    fill: orange;
+    
     bottom: 0%;
     left: 0%;
 }
+.circulos .circulo3 .path {
+    fill: rgb(22, 10, 190);
+}
 
 .circulos .circulo4 {
-    fill: red;
+    
     bottom: 0%;
     right: 0%;
    
+}
+.circulos .circulo4 .path {
+   fill: red;
 }
 
 
@@ -155,8 +165,7 @@ body {
 .header .li .a{}
 
 .main {
-   
-    margin: 0 0 1em ;
+    margin: 2em 0 2em 0 ;
     text-align: center;
     position: relative;
     z-index: 2;
@@ -169,7 +178,7 @@ body {
     /*background: lime;  */
     /*margin: 1em 0;  */
     
-    padding: 2em ;
+    padding: 1em ;
 
     display: flex;
     flex-flow: column wrap;
@@ -180,12 +189,12 @@ body {
 
 .seccion .info {
     font-size: 1.2em;
-    mix-blend-mode: multiply;
+   
 
 }
 
 .seccion .ul {
-    margin: 2em 0 0;
+    margin: 2em 0 2em 0 ;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -200,10 +209,10 @@ body {
 
 .seccion .ul .a{
     text-transform: uppercase;
-    padding: 1em 1em 1em;
+    padding: 1em 1em 1em 1em;
     font-weight: 600;
-    border-top: 1px solid #000;
-    border-bottom: 2px solid #000;
+   
+    border-bottom: 1px solid #000;
     transition: all .5s ease;
 }
 
@@ -218,6 +227,7 @@ body {
     font-family: var(--tipo-titular);
     font-weight: 600;
     font-size: 5em;
+    
 }
 
 .seccion .h3 {
@@ -243,13 +253,15 @@ body {
 .seccion .article {
     width: 100%;
     min-height: 30vh;
+
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    position: relative;
 
+    position: relative;
     overflow: hidden;
+    border-radius: 1em;
     
 
  }
@@ -301,8 +313,17 @@ body {
     transform:translateZ(1) scale(1);
 
  }
+
+ .works {
+    
+    background-color: rgba(120, 6, 101, 0.518);
+    color: var(--negro);
+    
+
+}
  
  .works .h2 {
+    
     margin: 0 0 1rem;
 
  }
@@ -317,6 +338,7 @@ body {
     margin: 0 0 2em;
     font-size: 1em;
     text-align: left;
+    
 }
 
 .about .rrss{
@@ -343,7 +365,7 @@ body {
 }
 @keyframes circulo1 {
     from {
-        transform: rotate() scale(3);
+        transform: rotate(0deg) scale(3);
     }
     to {
         transform: rotate(360deg) scale(3);
@@ -355,13 +377,15 @@ body {
 
     padding: 2em 0;
     text-align: center;
+    color: var(--negro);
+    position: relative;
+    z-index: 2;
     
 
 }
 
 .footer span {
-   color: #000;
-    background-color: #fff;
+  
 
 }
 
