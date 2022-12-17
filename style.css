@@ -16,7 +16,7 @@
     border: 0;
     box-sizing: border-box;
     vertical-align: baseline;
-
+    color: #000;
     text-decoration: none;
     list-style: none;
 }
@@ -53,6 +53,15 @@ a {
     color: inherit;
 
 }
+body {
+    font-family: var(--tipo-principal);
+    font-size: 100%;
+    min-height: 100vh;
+    background-color: var(--blanco);
+    color: #000;
+    font-smooth: always;
+    
+}
 
 .circulos {
     position: fixed;
@@ -63,7 +72,7 @@ a {
     background-color: lightcoral;
     z-index: 1;
 
-    filter: blur(3em);
+    filter: blur(9em);
     animation: circulo1 100s linear infinite both;
 
 }
@@ -171,6 +180,7 @@ a {
 
 .seccion .info {
     font-size: 1.2em;
+    mix-blend-mode: multiply;
 
 }
 
@@ -343,14 +353,15 @@ a {
 
 .footer {
 
-    padding: 4em 0;
+    padding: 2em 0;
     text-align: center;
     
 
 }
 
 .footer span {
-   
+   color: #000;
+    background-color: #fff;
 
 }
 
