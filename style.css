@@ -5,9 +5,7 @@
     --gris-f:#757575;
     --negro: #000;
     --tipo-titular:'Playfair Display', serif;
-    --tipo-principal:'Inter', sans-serif;
-
-    
+    --tipo-principal:'Inter', sans-serif;   
 }
 
 * {
@@ -62,6 +60,37 @@ body {
     font-smooth: always;
     
 }
+/* js:
+ // cursor einstellungen - body cursor none
+$(document).ready(function() {
+
+    $('body').on({'mousemove' : function( e ){
+        console.clear()
+        let clientX = e.originalEvent.clientX
+        let clientY = e.originalEvent.clientY
+
+            $('#cursor').css({
+                'left' : (clientX - 20) + 'px',
+                'top' : (clientY - 20) + 'px'
+            })
+    }})
+})
+
+#cursor {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 3;
+    mix-blend-mode: difference;
+    
+}
+*/
+
 
 .circulos {
     position: fixed;
@@ -72,8 +101,7 @@ body {
     background-color: lightcoral;
     z-index: 1;
 
-    filter: blur(5em);
-    
+    filter: blur(5em); 
 
 }
 
@@ -104,7 +132,6 @@ body {
     fill: purple;
 }
 
-
 .circulos .circulo3 {
     
     bottom: 0%;
@@ -124,12 +151,9 @@ body {
    fill: red;
 }
 
-
-
-
 .header {
     width: 100%;
-    min-height: 5em;
+    min-height: 3em;
     padding: 1em 2em;
 
     display: flex;
@@ -137,17 +161,17 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    display: none;
+    background-color: #fa838374;
+    top: 0;
+    z-index: 3;
+    position: fixed;
 
 }
 
-.header .h1 {
-    
-}
-
-.header .h1 .a{}
-
-.header .nav{
+.h1{
+    font-family: var(--tipo-titular);
+    color: var(--negro);
+    font-style: italic;
 }
 
 .header .ul {
@@ -161,14 +185,20 @@ body {
     
     margin: 0 1em;
 }
-
-.header .li .a{}
+.header .li:hover {
+    padding: .5em;
+    border-radius: 8px;
+    background-color: rgba(255, 0, 0, 0.518);
+    color: #000;
+    transition: all ease-in .5s;
+}
 
 .main {
     margin: 2em 0 2em 0 ;
     text-align: center;
     position: relative;
     z-index: 2;
+    
 }
 
 .seccion {
@@ -184,13 +214,11 @@ body {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-
+  
 }
 
 .seccion .info {
     font-size: 1.2em;
-   
-
 }
 
 .seccion .ul {
@@ -211,34 +239,40 @@ body {
     text-transform: uppercase;
     padding: 1em 1em 1em 1em;
     font-weight: 600;
-   
     border-bottom: 1px solid #000;
+   
     transition: all .5s ease;
+    animation: aparecer1 2s ease 1 both;
 }
 
 .seccion .ul .a:hover {
     background-color: rgba(0, 0, 0, 0.503);
     color: #fff;
-    box-shadow: 3px 3px 2px #757575;
+    font-size: 1em;
+    font-weight: 200;
     border-radius: 6px 6px 6px 6px;
 }
 
 .seccion .h2 {
     font-family: var(--tipo-titular);
     font-weight: 600;
-    font-size: 5em;
+    font-size: 2em;
     
+}
+.auto-type {
+    border: none;
+    text-decoration: none;
+    position: static;
 }
 
 .seccion .h3 {
     font-family: var(--tipo-titular);
     letter-spacing: 2px;
-    font-size: 4em;
-    border-top: 0.2px solid #000;
+    font-size: 2em;
+    font-weight: 600;
+   
     
 }
-
-.seccion .p {}
 
 .seccion .grid {
     width: 90%;
@@ -246,7 +280,7 @@ body {
     margin: 1em 0 ;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 1em;
  }
 
@@ -262,11 +296,7 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 1em;
-    
-
  }
-
-.seccion .a { }
 
 .seccion .figure {
     width: 100%;
@@ -278,7 +308,6 @@ body {
 .seccion .img {
     width: 100%;
     border-radius: 12px 12px 12px 12px;
-    
  }
 
 .seccion .h4 {
@@ -325,7 +354,6 @@ body {
 
  }
 
-.about {}
 .about .h2 {
     margin: 0 0 2rem;
     border-bottom: 1px solid #444;
@@ -355,24 +383,30 @@ body {
     margin: 0 1em;
 }
 
-.about .li .a{}
-
 .about .svg {
-    width: 3em;
-    height: 3em;
+    width: 4em;
+    height: 4em;
    
+}
+.svg {
+    width: 4em;
+    height: 4em;
 }
 
 .footer {
 
     padding: 2em 0;
     text-align: center;
-    color: var(--negro);
     position: relative;
     z-index: 2;
+
+    background-color: #07060cb3;
+    
 }
 
-.footer span {}
+.footer span {
+    color: white;
+}
 
 @keyframes circulo1 {
     from {
@@ -381,6 +415,19 @@ body {
     to {
         transform: rotate(360deg) scale(3);
     }
+}
+
+@keyframes aparecer1 {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    to {
+opacity: 1;
+transform: translateY(0%);
+    }
+
 }
 
 
