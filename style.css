@@ -153,18 +153,20 @@ $(document).ready(function() {
 
 .header {
     width: 100%;
-    min-height: 3em;
-    padding: 1em 2em;
+    min-height: 2em;
+    padding: .5em 1em;
 
     display: flex;
     flex-flow:row wrap;
     justify-content: space-between;
     align-items: center;
 
-    background-color: #fa838374;
+    background-color: #fa8383b4;
+    color: var(--negro);
     top: 0;
     z-index: 3;
     position: fixed;
+    transition: all 1s ease;
 
 }
 
@@ -182,15 +184,15 @@ $(document).ready(function() {
 }
 
 .header .li {
-    
+    font-size: .8em;
     margin: 0 1em;
 }
 .header .li:hover {
-    padding: .5em;
-    border-radius: 8px;
-    background-color: rgba(255, 0, 0, 0.518);
-    color: #000;
-    transition: all ease-in .5s;
+    padding: .3em;
+    border-radius: .4em;
+    background-color: rgba(13, 13, 13, 0.753);
+    color: #fff;
+    transition: all ease .5s;
 }
 
 .main {
@@ -344,7 +346,7 @@ $(document).ready(function() {
 
  .works {
     
-    background-color: rgba(120, 6, 101, 0.518);
+    background-color: rgba(120, 6, 101, 0.685);
     color: var(--negro);    
 }
  
@@ -367,6 +369,7 @@ $(document).ready(function() {
     text-align: left;
     
 }
+
 
 .about .rrss{
     width: 100%;
