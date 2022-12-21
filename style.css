@@ -185,7 +185,7 @@ $(document).ready(function() {
 
 .header .li {
     font-size: .8em;
-    margin: 0 1em;
+    margin:0 1em;
 }
 .header .li:hover {
     padding: .3em;
@@ -272,9 +272,25 @@ $(document).ready(function() {
     letter-spacing: 2px;
     font-size: 2em;
     font-weight: 600;
+    margin: .3em;
    
     
 }
+
+.imgport {
+    width: 40%;
+    border-radius: 1em 0 1em 0;
+    filter: drop-shadow(16px 16px 10px black);
+    object-fit: cover;
+    
+    border: none;
+
+    animation: leaves 5s ease-in-out infinite alternate;
+        -webkit-animation: leaves 5s ease-in-out infinite alternate;
+    
+}
+
+
 
 .seccion .grid {
     width: 90%;
@@ -434,3 +450,13 @@ transform: translateY(0%);
 }
 
 
+@keyframes leaves {
+    0% {
+        transform: scale(.9);
+        -webkit-transform: scale(.9);
+    }
+    100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
