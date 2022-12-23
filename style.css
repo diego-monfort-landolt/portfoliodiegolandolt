@@ -318,13 +318,15 @@ $(document).ready(function() {
 
 .seccion .figure {
     width: 100%;
-    height: 60vh;
+    height: 30vh;
     border-radius: 12px 12px 12px 12px;
+    
     
  }
 
 .seccion .img {
     width: 100%;
+    object-fit: cover;
     border-radius: 12px 12px 12px 12px;
  }
 
