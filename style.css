@@ -235,17 +235,20 @@ $(document).ready(function() {
     /* background-color: limegreen;  */
    
     margin: 0 1em;
+    border-bottom: 1px solid #000;
+    
 }
 
 .seccion .ul .a{
     text-transform: uppercase;
     padding: 1em 1em 1em 1em;
     font-weight: 600;
-    border-bottom: 1px solid #000;
+   
    
     transition: all .5s ease;
     animation: aparecer1 2s ease 1 both;
 }
+
 
 .seccion .ul .a:hover {
     background-color: rgba(0, 0, 0, 0.503);
@@ -263,6 +266,7 @@ $(document).ready(function() {
 }
 .auto-type {
     border: none;
+    font-size: 1.5em;
     text-decoration: none;
     position: static;
 }
